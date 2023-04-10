@@ -110,7 +110,7 @@ class DwdPollenAPI:
         """Initialize the data object."""
         resource = "https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json"
 
-        self._rest = RestData(hass, 'GET', resource, None, None, None, None, True)
+        self._rest = RestData(hass, 'GET', resource, "UTF-8", None, None, None, None, True)
         self._partregion_ids = partregion_ids
         self.last_update = None
         self.sensordata = {}
