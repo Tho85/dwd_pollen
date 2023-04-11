@@ -295,6 +295,11 @@ class DwdPollenSensor(Entity):
         return "%s_%02d_%s_%s" % (self._entity_name, self._partregion_id, self._day, self._internal_pollen_id)
 
     @property
+    def unique_id(self):
+        """Return the ID """
+        return self.name
+
+    @property
     def icon(self):
         """Icon to use in the frontend, if any."""
         return "mdi:flower-outline"
@@ -360,6 +365,11 @@ class DwdPollenStatisticSensor(Entity):
     def name(self):
         """Return the name of the sensor."""
         return "%s_%02d_%s_%s" % (self._entity_name, self._partregion_id, self._day, self._statistic_type)
+
+    @property
+    def unique_id(self):
+        """Return the ID """
+        return self.name
 
     @property
     def icon(self):
